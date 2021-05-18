@@ -1,0 +1,2 @@
+# Library_management_system
+The aim of this project is to automate the primary tasks performed in a library. The project is helpful for both the library staff and the students as well. This system has a list of books available. The librarian can utilize this system to add or remove a book from the existing list and record the list of books issued and returned with the students' names. Using this Library Management system, one can check for the availability of a book.
