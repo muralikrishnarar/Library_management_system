@@ -26,5 +26,26 @@ class Library:
                 break
             else:
                 print("Please Enter a Valid Book Name")
+                
+    def bookAdd(self, book):
+        self.booksList.append(book)
+        print("Book has been added to the book list")
+
+    def bookReturn(self, book):
+        while True:
+            if book in self.lendDict.keys():
+                if book not in self.booksList:
+                    self.lendDict.pop(book)
+                    self.booksList.append(book)
+                    print(f"The {book} has been returned")
+                    break
+            elif book not in self.lendDict.keys():
+                if book in self.booksList:
+                    print(f"Book is not taken by anyone")
+                    break
+                else:
+                    print("Please Enter a Valid Book Name")
+                    break                
+                
 
    
