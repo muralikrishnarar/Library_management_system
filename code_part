@@ -45,7 +45,14 @@ class Library:
                     break
                 else:
                     print("Please Enter a Valid Book Name")
-                    break                
+                    break  
+                    
+    def libClose(self):
+        with open('current_Books.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Book Name"])
+            for i in self.booksList:
+                writer.writerow([i])                    
                 
 
    
