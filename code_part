@@ -52,7 +52,12 @@ class Library:
             writer = csv.writer(file)
             writer.writerow(["Book Name"])
             for i in self.booksList:
-                writer.writerow([i])                    
+                writer.writerow([i])   
                 
-
+                
+        with open('lend_Book.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(["Book Name", "Borrower"])
+            for x in self.lendDict:
+                writer.writerow([x, self.lendDict[x]])
    
