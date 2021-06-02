@@ -60,4 +60,14 @@ class Library:
             writer.writerow(["Book Name", "Borrower"])
             for x in self.lendDict:
                 writer.writerow([x, self.lendDict[x]])
+                
    
+if __name__ == '__main__':
+
+    with open('current_Books.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        repository_book = []
+        line_count = 0
+        for row in csv_reader:
+            if line_count == 0:
+                line_count += 1
