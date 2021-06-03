@@ -71,3 +71,11 @@ if __name__ == '__main__':
         for row in csv_reader:
             if line_count == 0:
                 line_count += 1
+            else:
+                repository_book.append(row[0])
+                line_count += 1
+
+        with open('lend_Book.csv') as csv_file:
+            csv_reader1 = csv.reader(csv_file, delimiter=',')
+            record_book = {}
+            line_count = 0            
