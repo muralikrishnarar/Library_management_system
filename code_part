@@ -78,4 +78,12 @@ if __name__ == '__main__':
         with open('lend_Book.csv') as csv_file:
             csv_reader1 = csv.reader(csv_file, delimiter=',')
             record_book = {}
-            line_count = 0            
+            line_count = 0  
+            for row in csv_reader1:
+                if line_count == 0:
+                    line_count += 1
+                else:
+                    record_book.update({row[0]: row[1]})
+                    line_count += 1
+
+        bookLib = Library(repository_book, "Code Linguists", record_book)            
