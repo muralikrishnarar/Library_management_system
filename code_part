@@ -86,4 +86,12 @@ if __name__ == '__main__':
                     record_book.update({row[0]: row[1]})
                     line_count += 1
 
-        bookLib = Library(repository_book, "Code Linguists", record_book)            
+        bookLib = Library(repository_book, "Code Linguists", record_book)
+    while True:
+        print(f"Welcome to the {bookLib.name} library. Enter your choice to continue")
+        print("1. Display all the currently available Books")
+        print("2. Borrow a book")
+        print("3. Add a new book")
+        print("4. Return a borrowed book")
+        user_choice = input()        
+        
